@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://rsmith484.github.io/FAQ-Accordion-Card/
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/RSmith484/FAQ-Accordion-Card.git
+- Live Site URL: https://rsmith484.github.io/FAQ-Accordion-Card/
 
 ## My process
 
