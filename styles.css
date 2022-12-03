@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* -- Variables -- */
+
+:root {
+
+/* -- Primary Text -- */
+--veryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+--softRed: hsl(14, 88%, 65%);
+
+/* -- Background Gradient -- */
+--softViolet: hsl(273, 75%, 66%);
+--softBlue: hsl(240, 73%, 65%);
+
+/* -- Neutral Text -- */
+--veryDarkGrayishBlue: hsl(237, 12%, 33%);
+--darkGrayishBlue: hsl(240, 6%, 50%);
+
+/* -- Divider -- */
+--lightGrayishBlue: hsl(240, 5%, 91%)
+}
+
+/* -- CSS Reset -- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* -- Gloabl Styles -- */
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: linear-gradient( hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    color: #000;
+    font-size: 12px;
+    line-height: 2;
+    
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-width: 800px;
+    min-height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* -- Images Section -- */
+
+.images {
+    position: relative;
+    flex: 50%;
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-position: 90% center;
+}
+
+.images-inner {
+    position: relative;
+    background: url('/images/illustration-woman-online-desktop.svg');
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+}
+
+#bg-box {
+    position: absolute;
+    height: 180px;
+    width: 180px;
+    top: 240px;
+    left: -90px;
+}
+
+
+/** -- Accordian Section -- */
+
+.accordian {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 25px;
+    margin-right: 20px;
+    width: 100%;
+}
+
+.accordian header {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--veryDarkDesaturatedBlue);
+}
+
+.accordian .faq {
+    margin-bottom: 10px;
+}
+
+.accordian .question {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--lightGrayishBlue);
+}
+
+.accordian .faq .question #arrow {
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.accordian .faq .answer {
+    display: none;
+}
+
+h2 {
+    color: var(--darkGrayishBlue);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h2:hover {
+    color: var(--softRed);
+    cursor: pointer;
+}
+
+p {
+    color: var(--darkGrayishBlue);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* -- Active States -- */
+
+.accordian .faq.active #arrow {
+    transform: rotate(180deg);
+}
+
+.accordian .faq.active .answer {
+    display: block;
+}
+
+.accordian .faq.active h2 {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        min-width: 500px;
+        height: auto;
+        margin: 100px;
+    }
+
+    .images {
+        padding: 20px;
+        background-image: url('./images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: 45% 10%;
+        background-size: 300px 150px;
+    }
+
+    .images-inner {
+        position: absolute;
+        background-image: url('./images/illustration-woman-online-mobile.svg');
+        height: 150%;
+        width: 100%;
+        top: -70%;
+        left: -0%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #bg-box {
+        display: none;
+    }
+
+    .accordian {
+        align-items: left;
+        justify-content: center;
+    }
+}
